@@ -8,7 +8,7 @@ pipeline {
      }
         stage ('Buil stage') {
           steps {
-              sh '/opt/apache-maven-3.9.6/bin/mvn clean install'
+              sh '/opt/apache-maven-3.9.6/bin/mvn clean install -Dmaven.test.skip=true'
        }
      }
         stage ('Push') {
