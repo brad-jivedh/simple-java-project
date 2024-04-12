@@ -3,12 +3,12 @@ pipeline {
    stages {
      stage ('Checkout Stage') {
        steps {
-           git changelog: false, poll: false, url: 'https://github.com/brad-jivedh/simple-java-project.git'
+          git changelog: false, poll: false, url: 'https://github.com/brad-jivedh/simple-java-project.git'
        }
      }
         stage ('Buil stage') {
           steps {
-              sh 'mvn clean install'
+              sh '/opt/apache-maven-3.9.6/bin/mvn clean install'
        }
      }
         stage ('Push') {
