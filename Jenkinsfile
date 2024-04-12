@@ -3,7 +3,7 @@ pipeline {
    stages {
      stage ('Checkout Stage') {
        steps {
-          sh 'git clone https://github.com/brad-jivedh/test-maven.git'
+           git changelog: false, poll: false, url: 'https://github.com/brad-jivedh/simple-java-project.git'
        }
      }
         stage ('Buil stage') {
